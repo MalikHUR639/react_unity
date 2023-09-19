@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <div className='game-provider'>
         <Unity unityProvider={unityProvider} style={{
+          marginTop:'60px',
           width: '87%',
           height: '71vh'
           

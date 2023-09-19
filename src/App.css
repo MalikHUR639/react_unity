@@ -1,8 +1,9 @@
 
 .App {
-  background-image: url('../public/game.jpg');
+  background-image: url('../public/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
-  width: 100%;
 }
 
 .game-provider{
