@@ -1,0 +1,12 @@
+
+.App {
+  background-image: url('../public/game.jpg');
+  height: 100vh;
+  width: 100%;
+}
+
+.game-provider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
