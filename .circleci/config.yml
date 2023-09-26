@@ -6,7 +6,7 @@ jobs:
     working_directory: ~/app
 
     steps:
-      - checkout  # Pull down your source code
+      - checkout  # Pull down your source_code
       - run:
           name: Install Dependencies
           command: npm install
