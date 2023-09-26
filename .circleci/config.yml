@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:16  # Use a Node.js image compatible with your project
+      - image: circleci/node:16  # Use a Node.js image compatible with your_project
     working_directory: ~/app
 
     steps:
