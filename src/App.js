@@ -1,25 +1,36 @@
-import React from 'react';
-import './App.css';
-import {Unity, useUnityContext} from 'react-unity-webgl'
-
+import React from "react";
+import { Unity, useUnityContext } from "react-unity-webgl";
+import "./App.css";
 
 function App() {
-  const { unityProvider } = useUnityContext({
+  const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
     loaderUrl: "assets/Build.loader.js",
     dataUrl: "assets/Build.data",
     frameworkUrl: "assets/Build.framework.js",
     codeUrl: "assets/Build.wasm",
   });
+
   return (
     <div className="App">
       <div className="game-provider">
+        {isLoaded === false && (
+          <>
+            <div className="loadingBar">
+              <div
+                className="loadingBarFill"
+                style={{ width: loadingProgression * 100 * 4 }}
+              />
+            </div>
+
+            <p className="text">
+              Loading Application... {Math.round(loadingProgression * 100)}%
+            </p>
+          </>
+        )}
         <Unity
           unityProvider={unityProvider}
-          style={{
-            width: "77%",
-            height: "90vh",
-            marginTop: "30px",
-          }}
+          className="unity-container"
+          style={{ display: isLoaded ? "block" : "none" }}
         />
       </div>
     </div>

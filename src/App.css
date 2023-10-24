@@ -1,19 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 .App {
-  background-image: url('../public/bg.png');
+  background-image: url("../public/bg_2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 
-.game-provider{
+.game-provider {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.unity-container {
+  margin-top: 2.5rem;
+  height: 85vh;
+  width: 75%;
 }
+.loadingBar {
+  background: #8c8c8c;
+  width: 400px;
+  height: 10px;
+  border-radius: 5px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  bottom: 50%;
+}
+
+.App .game-provider .loadingBar .loadingBarFill {
+  height: 6px;
+  border-radius: 5px;
+  margin: 2px;
+  background: #ffffff;
+  transition: 0.3s width ease-out;
+}
+.text{
+  position: absolute;
+  bottom: 46%;
+  color: black;
+  height: auto;
+}
+
