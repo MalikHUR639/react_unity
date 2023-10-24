@@ -1,9 +1,9 @@
 import React from "react";
-import { Unity, useUnityContext } from "react-unity-webgl";
+import {Unity, useUnityContext} from "react-unity-webgl";
 import "./App.css";
 
 function App() {
-  const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
+  const {unityProvider, loadingProgression, isLoaded} = useUnityContext({
     loaderUrl: "assets/Build.loader.js",
     dataUrl: "assets/Build.data",
     frameworkUrl: "assets/Build.framework.js",
@@ -18,10 +18,10 @@ function App() {
             <div className="loadingBar">
               <div
                 className="loadingBarFill"
-                style={{ width: loadingProgression * 100 * 4 }}
+                style={{width: loadingProgression * 100 * 4}}
               />
             </div>
-
+            //loadingBar
             <p className="text">
               Loading Application... {Math.round(loadingProgression * 100)}%
             </p>
@@ -30,7 +30,7 @@ function App() {
         <Unity
           unityProvider={unityProvider}
           className="unity-container"
-          style={{ display: isLoaded ? "block" : "none" }}
+          style={{display: isLoaded ? "block" : "none"}}
         />
       </div>
     </div>
