@@ -1,15 +1,10 @@
-import React from "react";
-import {Unity, useUnityContext} from "react-unity-webgl";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home'; 
+import Info from './Info'; 
+import Notfound from './NotFound';
 
-function App() {
-  const {unityProvider, loadingProgression, isLoaded} = useUnityContext({
-    loaderUrl: "assets/Build.loader.js",
-    dataUrl: "assets/Build.data",
-    frameworkUrl: "assets/Build.framework.js",
-    codeUrl: "assets/Build.wasm",
-  });
-
+const App = () => {
   return (
     <div className="App">
     <h1> <a href="/info">/info</a></h1>
