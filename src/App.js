@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+    <h1> <a href="/info">/info</a></h1>
       <div className="game-provider">
         {isLoaded === false && (
           <>
