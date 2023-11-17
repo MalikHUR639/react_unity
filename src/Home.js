@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import {Unity, useUnityContext} from "react-unity-webgl";
+import { Link } from 'react-router-dom';
 import "./App.css";
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
   
   return (
     <div className="App">
+    <Link to={'/info'}><h1>Hello!!!</h1></Link>
       <div className="game-provider">
         {isLoaded === false && (
           <>

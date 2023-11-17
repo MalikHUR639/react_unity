@@ -6,30 +6,13 @@ import Notfound from './NotFound';
 
 const App = () => {
   return (
-    <div className="App">
-    <h1> <a href="/info">/info</a></h1>
-      <div className="game-provider">
-        {isLoaded === false && (
-          <>
-            <div className="loadingBar">
-              <div
-                className="loadingBarFill"
-                style={{width: loadingProgression * 100 * 4}}
-              />
-            </div>
-            //loadingBar
-            <p className="text">
-              Loading Application... {Math.round(loadingProgression * 100)}%
-            </p>
-          </>
-        )}
-        <Unity
-          unityProvider={unityProvider}
-          className="unity-container"
-          style={{display: isLoaded ? "block" : "none"}}
-        />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="*" element={<Notfound />} />
+      </Routes>
+    </Router>
   );
 }
 
