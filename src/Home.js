@@ -13,7 +13,6 @@ function Home() {
   
   return (
     <div className="App">
-    <Link to={'/info'}><h1>Hello!!!</h1></Link>
       <div className="game-provider">
         {isLoaded === false && (
           <>
